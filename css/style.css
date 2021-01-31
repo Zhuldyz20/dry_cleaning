@@ -14,7 +14,7 @@
 
 body{
 font-family: var(--primary-font);
-background: url(img/shirt.jpg) no-repeat center center/cover;
+background: url(../img/shirt.jpg) no-repeat center center/cover;
 background-attachment: fixed;
 }
 
