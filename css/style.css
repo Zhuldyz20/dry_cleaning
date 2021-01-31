@@ -417,7 +417,7 @@ blockquote{
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url(https://www.countryflags.io/kz/flat/32.png);
+    /* background-image: url(https://www.countryflags.io/kz/flat/32.png); */
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -465,7 +465,7 @@ blockquote{
     background-repeat: no-repeat;
 }
 
-.ru:before {
+/* .ru:before {
     background-image: url(https://www.countryflags.io/ru/flat/32.png);
 }
 
@@ -475,7 +475,7 @@ blockquote{
 .kz:before {
     background-image: url(https://www.countryflags.io/kz/flat/32.png);
 }
-
+ */
 
 
 
