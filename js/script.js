@@ -56,4 +56,19 @@ const navSlide = () =>{
     
     navSlide();
 
-    
+    const selected = document.querySelector(".selected-lang");
+    const optionsContainer = document.querySelector(".ul-elements");
+
+    const optionsList = document.querySelectorAll(".option");
+
+
+    selected.addEventListener("click", () => {
+        optionsContainer.classList.toggle("active");
+      });
+
+      optionsList.forEach(o => {
+        o.addEventListener("click", () => {
+          selected.innerHTML = o.querySelector("a").innerHTML;
+          optionsContainer.classList.remove("active");
+        });
+      });
