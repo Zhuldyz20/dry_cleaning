@@ -56,6 +56,10 @@ const navSlide = () =>{
     
     navSlide();
 
+
+
+    
+
     const selected = document.querySelector(".selected-lang");
     const optionsContainer = document.querySelector(".ul-elements");
 

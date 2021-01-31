@@ -155,7 +155,7 @@ nav{
 ul{
     display: flex;
     justify-content: space-around;
-    width: 39%;
+    width: 50%;
 
 }
 
@@ -784,4 +784,128 @@ footer{
        
         font-family: var(--secondary-font);
     } 
+
+    .snippet{
+        background-color: #fff;
+        padding: 1rem 0;
+    }
+    
+    blockquote{
+        border: 5px solid var(--secondary-color);
+        padding: 2rem 0.1rem;
+        width: 31%;
+        text-align: left;
+    }
+    #feature{
+        background-color: #fff;
+        min-height: 40vh;
+    }
+    
+    #feature p{
+        font-size: 1.2rem;
+    }
+    
+    .feature-content{
+        display: block;
+        flex-direction: row;
+        column-gap: 2rem;
+        padding: 6rem 0 3rem 0;
+        width: 31%;
+    }
+    .portfolio-content{
+        display: grid;
+        flex-direction: column;
+        padding: 5rem 0;
+        height: 60vh;
+        gap: 0 3rem;
+        width: 31%;
+    }
+
+    .feature-box{
+        margin-right: 0px;
+        margin-top: 20px;
+        width: 31%;
+        display: grid;
+        flex-direction: column;
+        column-gap: 2rem;
+        row-gap: 2rem;
+        
+    }
+
+
+#contact{
+    background-color: #ddd;
+
+}
+
+.contact-content{
+    padding: 4rem 0;
+    width: 31%;
+}
+
+.contact-input-wrapper{
+    display: grid;
+
+    flex-direction: row;
+    padding-top: 3rem;
+    gap:0 5rem;
+}
+
+.email-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem 0;
+}
+
+.email-container > input{
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.2rem;
+}
+
+.email-container > textarea{
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.2rem;
+}
+
+.visit-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem 0rem;
+    margin-top: 40px;
+}
+
+.visit-details{
+    display: flex;
+}
+
+.detail-icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.watermark{
+    padding: 3rem 0 0 2rem;
+    opacity: 0.12;
+}
+   
+
+footer{
+    position: absolute;
+    color: #fff;
+
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+   
+   
 }

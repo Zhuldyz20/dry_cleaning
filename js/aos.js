@@ -8,7 +8,7 @@ var arrLang = {
     "ru-gb": {
       "HOME": "Главная",
       "ABOUT": "О нас",
-      "Gallery": "Галерея",
+      "Gallery": "Услуги и цены",
       "CONTACT": "Наши контакты",
       "Feature": "Свойства",
       "FeatureText":"Какой нибудь текст",
@@ -21,7 +21,7 @@ var arrLang = {
     "kz-gb": {
       "HOME": "Уй",
       "ABOUT": "Биздер жайлы",
-      "Gallery": "Галереясы",
+      "Gallery": "Қызметтер мен бағалар",
       "CONTACT": "Контактер",
       "Feature": "Кырылсып",
       "FeatureText":"Бул не деген сумдык",
@@ -60,12 +60,14 @@ var arrLang = {
   
             // update localStorage key
             if('localStorage' in window){
-                 localStorage.setItem('uiLang', lang);
+                 
                  console.log( localStorage.getItem('uiLang') );
+                 
             }
   
             $(".lang").each(function(index, element) {
               $(this).text(arrLang[lang][$(this).attr("key")]);
+             
             });
           });
 
