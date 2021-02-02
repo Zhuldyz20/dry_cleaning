@@ -155,7 +155,7 @@ nav{
 ul{
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 39%;
 
 }
 
@@ -714,7 +714,14 @@ footer{
     nav{
         position: static;
     }
+
+    .feature-content p{
+        margin-left: 15px;;
+    }
     
+    .feature-content h2{
+        margin-left: 10px;
+    }
 
     ul{
         
@@ -897,7 +904,7 @@ footer{
    
 
 footer{
-    position: absolute;
+    position: static;
     color: #fff;
 
     left: 0;
