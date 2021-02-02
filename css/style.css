@@ -80,7 +80,12 @@ hr{
 .container{
     width: 1200px;
     margin: 0 auto;
+    max-width: 60em;
+    @include make-container();
 }
+.row {
+    @include make-row();
+  }
 
 .btn{
     background: var(--secondary-color);
@@ -164,7 +169,7 @@ ul li{
 }
 
 ul li a{
-    font-size: 1.75rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #fff;
 }
