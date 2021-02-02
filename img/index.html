@@ -4,48 +4,258 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
 
-<div class="container"  style="width:20%;">
-  <h2>Carousel Example</h2>  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="shorty_polaroid.jpg" alt="Los Angeles" style="width:100%;">
-      </div>
+// create pager list items
+var sliderImage = $('.slider__images-image');
 
-      <div class="item">
-        <img src="kurtka_polaroid.jpg" alt="Chicago" style="width:100%;">
-      </div>
+sliderImage.each(function (index) {
+    $('.js__slider__pagers').append('<li>'+(index+1)+'</li>');
+});
+
+// set up vars
+var sliderPagers       = 'ol.js__slider__pagers li',
+    sliderPagersActive = '.js__slider__pagers li.active',
+    sliderImages       = '.js__slider__images',
+    sliderImagesItem   = '.slider__images-item',
+    sliderControlNext  = '.slider__control--next',
+    sliderControlPrev  = '.slider__control--prev',
+    sliderSpeed        = 5000,
+    lastElem           = $(sliderPagers).length-1,
+    sliderTarget;
+
+// add css heigt to slider images list
+function checkImageHeight() {
+    var sliderHeight = $('.slider__images-image:visible').height(); 
+    $(sliderImages).css('height', sliderHeight+'px');
+};
+
+sliderImage.on('load', function() {
+    checkImageHeight();
+    $(sliderImages).addClass('loaded')
+});
+$(window).resize(function(){
+    checkImageHeight();
+});
+
+// set up first slide
+$(sliderPagers).first().addClass('active');
+$(sliderImagesItem).hide().first().show();
+
+// transition function
+function sliderResponse(sliderTarget) {
+    $(sliderImagesItem).fadeOut(300).eq(sliderTarget).fadeIn(300);
+    $(sliderPagers).removeClass('active').eq(sliderTarget).addClass('active');
+}
+
+// pager controls
+$(sliderPagers).on('click', function() {
+    if ( !$(this).hasClass('active') ) {
+        sliderTarget = $(this).index();
+        sliderResponse(sliderTarget);
+        resetTiming();
+    }
+});
+
+// next/prev controls
+$(sliderControlNext).on('click', function() {
+    sliderTarget = $(sliderPagersActive).index();
+    sliderTarget === lastElem ? sliderTarget = 0 : sliderTarget = sliderTarget+1;
+    sliderResponse(sliderTarget);
+    resetTiming();
+});
+$(sliderControlPrev).on('click', function() {
+    sliderTarget = $(sliderPagersActive).index();
+    lastElem = $(sliderPagers).length-1;
+    sliderTarget === 0 ? sliderTarget = lastElem : sliderTarget = sliderTarget-1;
+    sliderResponse(sliderTarget);
+    resetTiming();
+});
+
+// slider timing
+function sliderTiming() {
+    sliderTarget = $(sliderPagersActive).index();
+    sliderTarget === lastElem ? sliderTarget = 0 : sliderTarget = sliderTarget+1;
+    sliderResponse(sliderTarget);
+}
+
+// slider autoplay
+var timingRun = setInterval(function() {
+    sliderTiming();
+}, sliderSpeed);
+
+function resetTiming() {
+    clearInterval(timingRun);
+    timingRun = setInterval(function() {
+      sliderTiming();
+    }, sliderSpeed);
+}
+
+
+</script>
+<style>
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+.slider {
+  max-width: 800px;
+}
+.slider__images {
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  list-style-type: none;
+  transition: opacity .4s ease-in, visibility .4s ease-in;
+  
+  &.loaded {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &-item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     
-      <div class="item">
-        <img src="kurtka2_polaroid.jpg" alt="New york" style="width:100%;">
-      </div>
+    .no-js & {
+      
+      &:first-of-type {
+        position: relative; 
+      }
+      
+      &:not(:first-of-type) {
+        display: none !important;
+      }
+    }
+  }
+  
+  &-image {
+    display: block;
+  }
+}
+.slider__controls {
+  margin-top: 30px;
+  user-select: none;
+  text-align: center;
+}
+.slider__control {
+  display: inline-block;
+  color: #829995;
+  cursor: pointer;
+}
+.slider__control--prev {
+  margin-right: 10px;
+}
+.slider__control--next {
+  margin-left: 10px;
+}
+.slider__pagers {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #829995;
+    padding: 0 10px;
+    
+    &.active {
+      color: #333;
+    }
+  }
+}
+
+// vanity styles
+body {
+  background: #EF629F;
+  background: linear-gradient(to right, #EF629F, #EECDA3);
+  font-family: Avenir, 'Proxima Nova', sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+}
+ul,
+ol,
+div {
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+h1 {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.wrapper {
+  padding: 30px;
+}
+.header,
+.footer {
+  margin: auto;
+  max-width: 800px;
+  text-align: center;
+  color: #fff;
+  
+  a {
+    color: #fff;
+  }
+}
+.footer {
+  margin-top: 30px;
+}
+.slider {
+  margin: 30px auto 0;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+</style>
+
+
+</head>
+<div class="wrapper">
+  <header class="header">
+    <h1>Really simple jQuery slider</h1>
+  </header>
+
+  <div class="slider">  
+
+    <ul class="js__slider__images slider__images">
+      <li class="slider__images-item"><img class="slider__images-image" src="https://unsplash.it/800/450?image=830" /></li>
+      <li class="slider__images-item"><img class="slider__images-image" src="https://unsplash.it/800/450?image=1028" /></li>
+      <li class="slider__images-item"><img class="slider__images-image" src="https://unsplash.it/800/450?image=981" /></li>
+      <li class="slider__images-item"><img class="slider__images-image" src="https://unsplash.it/800/450?image=1026" /></li>
+      <li class="slider__images-item"><img class="slider__images-image" src="https://unsplash.it/800/450?image=741" /></li>
+    </ul>
+
+    <div class="slider__controls">
+      <span class="slider__control js__slider__control--prev slider__control--prev">Prev</span>
+      
+      <ol class="js__slider__pagers slider__pagers"></ol>
+      
+      <span class="slider__control js__slider__control--next slider__control--next">Next</span>
     </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
-</div>
-
-</body>
-</html>
+  
+  <footer class="footer">
+    <p>For when 'really simple' is all you need</p>
+  </footer>
+ </div>
