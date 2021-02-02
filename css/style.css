@@ -137,7 +137,7 @@ nav{
     min-height: 8vh;
     z-index: 99;
     transition: all 500ms ease;
-    padding: 0.5rem 0 !important;
+    padding: 1rem 0 !important;
     width: 100%;
    
 }
