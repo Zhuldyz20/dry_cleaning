@@ -164,7 +164,7 @@ ul li{
 }
 
 ul li a{
-    font-size: 0.95rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: #fff;
 }
@@ -269,27 +269,28 @@ blockquote{
 
 
 .subscribe{
+    background-image: url("../img/Panel.jpg");
     font-weight: 900;
     font-size: 1.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
+    justify-content: center;
+    width: 100%;
     margin: 0 auto;
     padding: 4rem 0;
 }
 
 #gallery{
     background-color: #fff;
-    min-height: 60vh;
+    min-height: 50vh;
 }
 
 .portfolio-content{
     display: flex;
     flex-direction: row;
     padding: 5rem 0;
-    height: 60vh;
+    height: 50vh;
     gap: 0 3rem;
 }
 

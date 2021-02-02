@@ -18,6 +18,10 @@
   <link href="css/style.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+
 </head>
 <body>
 
@@ -45,6 +49,7 @@
                         <a class="lang" href="#feature" key="ABOUT"></a>
                     </li>
                     
+                    
                     <li>
                         <a class="lang" href="#gallery" key="Gallery"></a>
                     </li>
@@ -55,7 +60,7 @@
 
                     <li>
                         <div id="lang-top" class="lang-menu">
-                            <div id='toplang' class="selected-lang" style="color: white;">KZ</div>
+                            <div id='toplang' class="selected-lang" style="color: white;">RU</div>
                             <ul class="ul-elements">
                                 <li class="option">
                                  <a href="#"  class="kz translate" id="kz-gb" style="color: black;">KZ</a>
@@ -75,11 +80,7 @@
                     
                 </ul>
                
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
+                
             </div>
            
                 </nav>
@@ -124,56 +125,85 @@
                         </div>
                         <div class="card-text">
                             <h3 class="normal lang" key="OurWorks"></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tempore.</p>
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
+                            
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                  <div class="item active">
+                                    <a href="img/shorty_polaroid.jpg"><img src="img/shorty_polaroid.jpg" alt="Шорты" style="width:100%;"></a>
+                                  </div>
+                            
+                                  <div class="item">
+                                    <a href="img/kurtka_polaroid.jpg"><img src="img/kurtka_polaroid.jpg" alt="Куртка" style="width:100%;"></a>
+                                  </div>
+                                
+                                  <div class="item">
+                                    <a href="img/kurtka2_polaroid.jpg"><img src="img/kurtka2_polaroid.jpg" alt="Еще одна куртка" style="width:100%;"></a>
+                                  </div>
+                                </div>
+                            
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                  <span class="glyphicon glyphicon-chevron-left"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                  <span class="glyphicon glyphicon-chevron-right"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </div>
                         </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-broom fa-2x"></i>
+                            </div>
+                            <div class="card-text">
+                                <h3 class="normal lang" key="Сертификаты">Сертификаты</h3>
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    </ol>
+                                
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                      <div class="item active">
+                                        <a href="img/shorty_polaroid.jpg"><img src="img/shorty_polaroid.jpg" alt="Шорты" style="width:100%;"></a>
+                                      </div>
+                                
+                                      <div class="item">
+                                        <a href="img/kurtka_polaroid.jpg"><img src="img/kurtka_polaroid.jpg" alt="Куртка" style="width:100%;"></a>
+                                      </div>
+                                    
+                                      <div class="item">
+                                        <a href="img/kurtka2_polaroid.jpg"><img src="img/kurtka2_polaroid.jpg" alt="Еще одна куртка" style="width:100%;"></a>
+                                      </div>
+                                    </div>
+                                
+                                    <!-- Left and right controls -->
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                      <span class="glyphicon glyphicon-chevron-left"></span>
+                                      <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                      <span class="glyphicon glyphicon-chevron-right"></span>
+                                      <span class="sr-only">Next</span>
+                                    </a>
+                                  </div>
+                            </div>
                     </div>
-                    <div class="card">
-                        <div class="card-icon">
-                            <i class="fas fa-hand-sparkles fa-2x"></i>
-                        </div>
-                        <div class="card-text">
-                            <h3 class="normal">Lets dry</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tempore.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">
-                            <i class="fas fa-tshirt fa-2x"></i>
-                        </div>
-                        <div class="card-text">
-                            <h3 class="normal">Lets dry</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tempore.</p>
-                        </div>
-                    </div>
+                    
+               
+               
                 </div>
-                <div class= "feature-box" data-aos="fade-left">
-                    <div class="card">
-                        <div class="card-icon">
-                            <i class="fas fa-mobile-alt fa-2x"></i>
-                        </div>
-                        <div class="card-text">
-                            <h3 class="normal">Lets dry</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tempore.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">
-                            <i class="fas fa-hourglass-half fa-2x"></i>
-                        </div>
-                        <div class="card-text">
-                            <h3 class="normal">Lets dry</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tempore.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">
-                            <i class="fas fa-head-side-mask fa-2x"></i>
-                        </div>
-                        <div class="card-text">
-                            <h3 class="normal">Lets dry</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tempore.</p>
-                        </div>
-                    </div>
                 </div>
             </div>  
 
@@ -184,14 +214,17 @@
         
             <div class="subscriber-text">
                 <h2 class="normal">
-                    Subscribe
+                    Мы в социальных сетях
                 </h2>
                 <p>
-                    Consider subscribing to our instagram 
+                    Подпишись на наш инстаграмм и в контакте
                 </p>
             </div>
             <div>
-                <a href="#" class ="btn btn-small">Subscribe Now</a>
+                <a  target="_blank" href="https://instagram.com/lavaggio_kst?igshid=152pbdi5cm7ue"><img src="img/insta.png"></a>
+            </div>
+            <div>
+                <a  target="_blank" href="https://vk.com/club122073166"><img src="img/vk.png"></a>
             </div>
 
     </section>
@@ -201,7 +234,7 @@
             <div class="portfolio-content" data-aos="fade-up">
                 <div class="section-header">
                     <h2>
-                        Gallery
+                        Услуги и цены
                     </h2>
                     <hr>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -209,24 +242,50 @@
                          cumque itaque cum labore sed temporibus earum a est alias magni, modi possimus maxime.</p>
                 </div>
                 <div class="portfolio-images">
-                    <div class="image-box">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                    
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <a href="img/shorty_polaroid.jpg"><img src="img/shorty_polaroid.jpg" alt="Шорты" style="width:100%;"></a>
+                          </div>
+                    
+                          <div class="item">
+                            <a href="img/kurtka_polaroid.jpg"><img src="img/kurtka_polaroid.jpg" alt="Куртка" style="width:100%;"></a>
+                          </div>
+                        
+                          <div class="item">
+                            <a href="img/kurtka2_polaroid.jpg"><img src="img/kurtka2_polaroid.jpg" alt="Еще одна куртка" style="width:100%;"></a>
+                          </div>
+                        </div>
+                    
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+
+                  <!--  <div class="image-box">
                         <img src="img/shirt.jpg">
-                    </div>
+                    </div> -->
                     <div class="image-box">
                         <img src="img/shirts.jpg">
                     </div>
                     <div class="image-box">
                         <img src="img/auto.jpg">
                     </div>
-                    <div class="image-box">
-                        <img src="img/shirt.jpg">
-                    </div>
-                    <div class="image-box">
-                        <img src="img/shirts.jpg">
-                    </div>
-                    <div class="image-box">
-                        <img src="img/shirt.jpg">
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -239,46 +298,30 @@
                 <form action="#" id="form" >
                 <div class="contact-input-wrapper">
                     <div class="email-container">
-                        <h2 class="normal">
-                            Email Us
-                        </h2>
-                        <input type="text" name="name" id="name" placeholder="Your Name" class="form_input _req">
-                        <input type="email" name="email" id="email" placeholder="Your Email"class="form_email _req _email">
-                        <input type="text" name="subject" id="subject" placeholder="Subject"class="form_sub ">
-                        <textarea name="message" id = "message" cols="30" rows="10" placeholder="Message"class="form_mes"></textarea>
-                        <div class="button">
-                            <button type="submit" class="btn btn-small">Send</button>
-                            <!-- <a href="#" class="btn btn-small">Send</a> -->
-                        </div>
                        
-                    </div>
+                            <address>
+                              <strong>Наш адрес:</strong><br>
+                              улица Тауелсиздик 159 (угол Урицкого)<br>
+                              Костанай 110000<br>
+                              Казахстан<br>
+
+                              <abbr title="Phone">+7 (7142) 54 29 80</abbr><br>
+                              <abbr title="Phone">+7 (701) 478 8338</abbr><br>
+                              <strong>Часы работы:</strong><br>
+                              пн:	09:00–19:00<br>
+                              вт:	09:00–19:00<br>
+                              ср:	09:00–19:00<br>
+                              чт:	09:00–19:00<br>
+                              пт:	09:00–19:00<br>
+                              сб:	10:00–17:00<br>
+                              вс:	10:00–17:00<br>
+                            </address>
+                            
+                           
+                          
            </form>
-                    <div class="visit-container">
-                        <!-- <h2 class="normal mg-none">Visit Us</h2>
-                        <div class="visit-details">
-                            <div class="detail-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <p>Alikhan Bokeykhana 8, Astana, Kazakhstan</p>
-                        </div>
-
-                        <div class="visit-details">
-                            <div class="detail-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <p>Phone: 87077980126</p>
-                        </div>
-
-                        <div class="visit-details">
-                            <div class="detail-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <p>Email: 0126@nur.kz   </p>
-                        </div>
-                        <div class="watermak">
-                            <i class="far fa-envelope fa-10x"></i>
-                        </div> -->
-                        <a class="dg-widget-link" href="http://2gis.kz/kostanay/profiles/70000001035612875,70000001035612938,70000001035229379/center/63.62474441528321,53.209528110259136/zoom/13?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Костаная</a><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":53.209528110259136,"lon":63.62474441528321,"zoom":13},"opt":{"city":"kostanay"},"org":[{"id":"70000001035612875"},{"id":"70000001035612938"},{"id":"70000001035229379"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+                    
+                        <a class="dg-widget-link" href="http://2gis.kz/kostanay/profiles/70000001035612875,70000001035612938,70000001035229379/center/63.62474441528321,53.209528110259136/zoom/13?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Костаная</a><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":53.209528110259136,"lon":63.62474441528321,"zoom":13},"opt":{"city":"kostanay"},"org":[{"id":"70000001035612938"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
 
                     </div> 
                 </div>
@@ -292,8 +335,8 @@
             <h3>Birdeme</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum a officiis optio in cupiditate commodi quisquam iste hic ipsum repudiandae?</p>
             <ul class ="socials">
-               <li><a href = "#"><i class="fa fa-instagram"></i></a></li>
-               <li><a href = "#"><i class="fa fa-vk"></i></a></li>
+               <li><a target="_blank" href = "https://instagram.com/lavaggio_kst?igshid=152pbdi5cm7ue"><i class="fa fa-instagram"></i></a></li>
+               <li><a target="_blank" href = "https://vk.com/club122073166"><i class="fa fa-vk"></i></a></li>
              
             </ul>
         </div>
